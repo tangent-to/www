@@ -9,7 +9,9 @@ image: "/images/projects/corn-n/prototype-model-for potatoe.png"
 tech:
   - Python
   - PyTorch
-  - Dash
+  - Gradio
+  - pandas
+  - scikit-learn
 ---
 
 

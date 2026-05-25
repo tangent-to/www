@@ -8,9 +8,8 @@ repoURL: ""
 image: "/images/projects/corn-n/prototype-model-for potatoe.png"
 tech:
   - Python
-  - TensorFlow
   - PyTorch
-  - Dash
+  - Gradio
   - pandas
   - scikit-learn
 ---
