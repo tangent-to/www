@@ -12,6 +12,8 @@ tech:
   - Vexflow.js
 ---
 
+[jmonlabs.github.io/algo/](https://jmonlabs.github.io/algo/)
+
 ## Le problème
 
 La composition musicale algorithmique nécessite généralement des environnements complexes, des langages spécialisés (SuperCollider, Max/MSP) ou des bibliothèques lourdes difficiles à apprendre et à partager. Les approches génératives — minimalisme, processus stochastiques, automates cellulaires — combinent théorie musicale et flexibilité algorithmique, mais restent peu accessibles. Le package Python *Djalgo* a été développé chez tangent.to pour combler le vide. Toutefois, *Djalgo* n'a pas de structure claire, flexible, complète et déclarative pour définir les items musicaux. De plus, la base Python de *Djalgo* reste trop lourde pour une exécution sans installation via WebAssembly.
