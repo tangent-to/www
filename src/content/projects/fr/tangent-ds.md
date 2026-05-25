@@ -11,7 +11,8 @@ tech:
   - datascience
 ---
 
-→ [https://tangent-to.github.io/ds/](https://tangent-to.github.io/ds/)
+- Documentation, [tangent-to.github.io/ds/](https://tangent-to.github.io/ds/)
+- Cours sur Observable, [observablehq.com/collection/@essi/data-science-with-tangent](https://observablehq.com/collection/@essi/data-science-with-tangent)
 
 ## Le Problème
 

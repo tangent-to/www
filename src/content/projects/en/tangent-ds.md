@@ -10,7 +10,9 @@ tech:
   - JavaScript
   - datascience
 ---
-→ [https://tangent-to.github.io/ds/](https://tangent-to.github.io/ds/)
+
+- Documentation, [tangent-to.github.io/ds/](https://tangent-to.github.io/ds/)
+- Course on Observable, [observablehq.com/collection/@essi/data-science-with-tangent](https://observablehq.com/collection/@essi/data-science-with-tangent)
 
 ## The Problem
 JavaScript is a programming language embedded in virtually all devices (computers, phones, and tablets) equipped with a browser. A data science toolkit in JavaScript enables usage without installation, provided the device is connected to the internet.

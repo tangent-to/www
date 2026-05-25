@@ -1,5 +1,5 @@
 ---
-title: "JMON labs"
+title: "jmon labs"
 description: "Musique algorithmique en JavaScript"
 date: 2025-10-01
 draft: false
@@ -8,7 +8,6 @@ repoURL: ""
 image: "/images/projects/jmon/jmon-algo.png"
 tech:
   - JavaScript
-  - Typescript
   - Tone.js
   - Vexflow.js
 ---
@@ -21,19 +20,20 @@ La composition musicale algorithmique nécessite généralement des environnemen
 
 JMON (JSON Music Object Notation, *jam on!*) est un format riche et délaratif pour décrire la musique. Il enrichie le format midi et le rend lisible dans une fichier texte.
 
-JMON-algo  est un framework JavaScript pour la composition musicale algorithmique basé sur le format JMON. Il fournit :
+jmon/algo  est un framework JavaScript pour la composition musicale algorithmique basé sur le format JMON. Il fournit :
 
 - Une représentation musicale structurée en JSON, lisible et programmable
 - Des outils de théorie musicale intégrés (gammes, progressions, harmonie, rythme)
 - Des techniques de composition générative sans apprentissage profond : marches aléatoires, fractales, automates cellulaires, algorithmes génétiques, processus gaussiens
 - Une conversion transparente vers multiples formats (MIDI, ABC, SuperCollider, Tone.js)
 - Une visualisation et lecture interactive des partitions
+- Une interface pour des performances en *live coding*
 
 Le framework privilégie la créativité mathématique et algorithmique plutôt que l'intelligence artificielle, offrant un contrôle précis, une compréhension claire des processus compositionnels, et une appropriation du processus créatif.
 
 ## Mise en oeuvre technique
 
-- Framework JavaScript pur (converti depuis TypeScript pour une meilleure compatibilité)
+- Framework JavaScript pur
 - Intégration avec Observable pour notebooks interactifs
 - Modules spécialisés : validation de format, conversion MIDI/ABC/SuperCollider, visualisation de partitions
 - Outils d'analyse musicale (utiles pour algorithmes génétiques)
@@ -41,4 +41,4 @@ Le framework privilégie la créativité mathématique et algorithmique plutôt 
 
 ## État actuel
 
-Le projet actif, mais pour une approche complète et fonctionnelle, il est recommandé en ce moment d'utiliser *Djalgo*. Un livre interactif gratuit est en cours de rédaction. Des développements futurs sont prévus pour corriger les bugs et étendre les capacités analytiques et les outils de composition.
+Le projet mature et prêt pour l'utilisation.
