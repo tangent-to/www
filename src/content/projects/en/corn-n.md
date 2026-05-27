@@ -35,7 +35,8 @@ Two operating modes are supported and reported separately:
 - Separate prediction of site potential, combined multiplicatively with the response shape
 - Conformal calibration for honest, distribution-free prediction intervals
 - Project-stratified train/test splitting and strict avoidance of data leakage
-- Interactive interface (Marimo) for agronomists to explore scenarios
+- Interactive interface (Gradio) for agronomists to explore scenarios
+- Deployment with a Docker container
 
 ## Current Status
 
