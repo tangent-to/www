@@ -22,6 +22,10 @@ type Props = CollectionEntry<"projects">;
 
 const project = Astro.props;
 const { Content } = await project.render();
+
+// Hero image: use `hero` when defined (including "" to opt out),
+// otherwise fall back to the card `image`.
+const heroSrc = project.data.hero !== undefined ? project.data.hero : project.data.image;
 ---
 
 <PageLayout title={project.data.title} description={project.data.description}>
@@ -61,7 +65,25 @@ const { Content } = await project.render();
           )}
         </nav>
       )}
+      {project.data.tech && project.data.tech.length > 0 && (
+        <div class="animate flex flex-wrap gap-2 pt-3">
+          {project.data.tech.map((tech: string) => (
+            <span class="text-xs px-2 py-1 rounded bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
+    {heroSrc && (
+      <div class="animate mb-10 rounded-lg overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6">
+        <img
+          src={heroSrc}
+          alt={project.data.title}
+          class="w-full max-h-[24rem] object-contain"
+        />
+      </div>
+    )}
     <article class="animate">
       <Content />
     </article>

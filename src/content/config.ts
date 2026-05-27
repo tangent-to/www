@@ -31,6 +31,9 @@ const projects = defineCollection({
     repoURL: z.string().optional(),
     // Additional fields for better project display
     image: z.string().optional(),
+    // Hero image on the project detail page. Falls back to `image` when
+    // omitted; set `hero: ""` to explicitly show no hero image.
+    hero: z.string().optional(),
     tech: z.array(z.string()).optional(),
   }),
 });

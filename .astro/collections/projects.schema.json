@@ -38,6 +38,9 @@
         "image": {
           "type": "string"
         },
+        "hero": {
+          "type": "string"
+        },
         "tech": {
           "type": "array",
           "items": {
