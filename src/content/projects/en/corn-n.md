@@ -12,7 +12,8 @@ tech:
   - GPyTorch
   - XGBoost
   - scikit-learn
-  - Marimo
+  - Gradio
+  - Docker
 ---
 
 ## The Problem
