@@ -7,7 +7,6 @@ demoURL: ""
 repoURL: ""
 image: "/images/projects/corn-n/prototype-model-for-potato.png"
 tech:
-  - Python
   - PyTorch
   - GPyTorch
   - XGBoost
