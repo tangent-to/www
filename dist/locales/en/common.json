@@ -8,8 +8,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Mathematics for Life Sciences",
-    "subtitle": "Science-based data science and AI consulting for agriculture, ecology, and environmental research"
+    "title": "Mathematics for Natural Sciences",
+    "subtitle": "Science-based data science and AI consulting for agriculture, ecology, geology and environmental research"
   },
   "services": {
     "title": "Services",
@@ -24,9 +24,9 @@
       "keywords": "Web applications, dashboards, data visualization, scientific computing"
     },
     "service3": {
-      "title": "Statistical Automation",
-      "description": "Transform repetitive analytical tasks into automated workflows. Enter your data and receive comprehensive statistical analyses, publication-ready visualizations, and model outputs. We specialize in automating physical models and statistical procedures for systematic reporting and quality control in research and operational contexts.",
-      "keywords": "Automation, reproducible research, statistical computing, workflow optimization"
+      "title": "Physics-Based Modeling",
+      "description": "Mechanistic models grounded in physical laws — conservation of mass and energy, transport, reaction kinetics — for natural systems such as water, soil, and the subsurface. Where the data allow, we couple these process-based models with data-driven components and differentiable programming, so they can be calibrated against observations and quantify their own uncertainty while remaining physically interpretable rather than black boxes.",
+      "keywords": "Process-based modeling, differentiable simulation, inverse problems, data assimilation, uncertainty quantification"
     }
   },
   "home": {

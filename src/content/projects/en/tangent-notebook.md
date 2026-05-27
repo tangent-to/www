@@ -17,7 +17,7 @@ tech:
 
 ## The Problem
 
-ObservableHQ offers a beautiful interface for JavaScript computational notebooks. Although its lock-in approach is likely to change, notebooks can't be saved locally for future use and the interface can't be used offline. There is a need for a simple JavaScript notebooks for data exploration, scientific computing, algorithmic development, and arts.
+ObservableHQ offers a beautiful interface for JavaScript computational notebooks. Although its lock-in approach is likely to change, notebooks can't be saved locally for future use and the interface can't be used offline. There is a need for a simple JavaScript notebook for data exploration, scientific computing, algorithmic development, and arts.
 
 ## The Approach
 

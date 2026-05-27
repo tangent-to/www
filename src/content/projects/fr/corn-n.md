@@ -1,39 +1,42 @@
 ---
-title: "Modelisation de la reponse du maïs à la fertilization azotée"
-description: "Réseau de neurones predisant la reponse du maïs a l'azote"
-date: 2024-01-15
+title: "Modélisation de la réponse du maïs à la fertilisation azotée"
+description: "Modélisation dose–réponse de la fertilisation azotée du maïs, alliant formes agronomiques canoniques, apprentissage automatique moderne et incertitude calibrée"
+date: 2026-05-20
 draft: false
 demoURL: ""
 repoURL: ""
-image: "/images/projects/corn-n/prototype-model-for potatoe.png"
+image: "/images/projects/corn-n/prototype-model-for-potato.png"
 tech:
   - Python
   - PyTorch
-  - Gradio
-  - pandas
+  - GPyTorch
+  - XGBoost
   - scikit-learn
+  - Marimo
 ---
-
 
 ## Le problème
 
-Les recommandations d'engrais azoté pour le maïs s'appuient généralement sur des lignes directrices régionales simplifiées qui ne tiennent pas compte des interactions complexes entre les propriétés du sol, les conditions météorologiques et les pratiques de gestion. Cela peut entraîner une sous-fertilisation (rendements réduits, donc un besoin d'expansion agricole) ou une sur-fertilisation (perte économique et impact environnemental). Les agriculteurs et agronomes ont besoin de recommandations spécifiques au site et basées sur les données, qui intègrent les multiples facteurs affectant l'efficacité de l'utilisation de l'azote.
+Les recommandations d'engrais azoté pour le maïs s'appuient généralement sur des lignes directrices régionales simplifiées qui ignorent les interactions entre le sol, la météo et les pratiques de gestion. La sous-fertilisation coûte du rendement ; la sur-fertilisation coûte de l'argent et nuit à l'environnement. Ce dont un agronome a réellement besoin, c'est d'une courbe dose–réponse spécifique au site — comment le rendement répond à l'azote sur une parcelle donnée — accompagnée d'une indication honnête du degré de confiance que l'on peut lui accorder.
 
 ## L'approche
 
-Nous développons un modèle de réseau de neurones qui génère des courbes de réponse à la dose d'azote pour le maïs en intégrant :
-- Les propriétés physiques et chimiques du sol
-- L'historique et les pratiques de gestion des terres
-- Les séries chronologiques météorologiques avant le semis et tout au long de la saison de croissance
+Ce projet client en cours modélise la réponse dose–azote du maïs en alliant des formes agronomiques canoniques (Mitscherlich, linéaire-plateau, quadratique-plateau) à l'apprentissage statistique moderne. Plutôt que de prédire le rendement en une seule étape « boîte noire », le modèle sépare deux sources de variation physiquement distinctes — le potentiel de rendement du site et la forme de sa réponse à l'azote — puis les recombine. Cela reflète le comportement réel du système et évite l'écueil de la régression brute sur le rendement absolu.
 
-Le modèle apprend les relations non linéaires entre ces variables d'entrée et la réponse des cultures, produisant des prédictions de réponse à la dose spécifiques au site. Un tableau de bord interactif permettra aux agriculteurs et agronomes d'explorer des scénarios, de visualiser les réponses prédites et d'extraire des recommandations pratiques.
+Deux modes d'utilisation sont pris en charge et rapportés séparément :
 
-## Mise en oeuvre technique
+- **Aveugle** : prédiction à partir des seules caractéristiques du site — ce qu'on peut attendre sur une nouvelle parcelle sans observation préalable
+- **Assisté par l'agronome** : l'agronome fournit le potentiel de rendement attendu, qui ancre l'échelle de la courbe
 
-- Architecture d'apprentissage profond pour séries chronologiques multivariées
-- Intégration de données spatiales (sol, culture précédente, densité de semis, informations sur l'hybride) et temporelles (météo, date de semis et de récolte)
-- Visualisation interactive pour l'exploration de scénarios
+## Mise en œuvre technique
+
+- Formes de réponse agronomiques canoniques utilisées comme a priori structurel
+- Un processus gaussien multi-tâches (corégionalisation) et un réseau de neurones concave, contraint à plateau, pour la forme de la réponse
+- Prédiction séparée du potentiel du site, combinée multiplicativement à la forme de la réponse
+- Calibration conforme pour des intervalles de prédiction honnêtes et sans hypothèse de distribution
+- Découpage entraînement/test stratifié par projet et prévention stricte des fuites de données
+- Interface interactive (Marimo) permettant aux agronomes d'explorer des scénarios
 
 ## État actuel
 
-Projet en cours avec des résultats préliminaires prometteurs. L'architecture du modèle démontre la capacité de capturer la dynamique complexe de l'azote ; la validation est en cours dans diverses conditions de site et scénarios de gestion.
+Mandat client en cours. La chaîne de modélisation est fonctionnelle et validée selon un protocole sans fuite de données, stratifié par projet, avec une incertitude rapportée pour chaque prédiction. Un constat est volontairement honnête plutôt que flatteur : en mode aveugle, la précision atteignable est limitée par ce que permettent les caractéristiques de site disponibles, et non par le choix de l'algorithme. Aller plus loin exige des signaux de site plus riches — historique de rendement, observations en saison ou satellitaires — plutôt qu'un modèle plus sophistiqué.

@@ -8,8 +8,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Mathématiques pour les sciences de la vie",
-    "subtitle": "Consultation en science des données et IA fondée sur la science pour l'agriculture, l'écologie et la recherche environnementale"
+    "title": "Mathématiques pour les sciences naturelles",
+    "subtitle": "Consultation en science des données et IA fondée sur la science pour l'agriculture, l'écologie, la géologie et la recherche environnementale"
   },
   "services": {
     "title": "Services",
@@ -24,9 +24,9 @@
       "keywords": "Applications web, tableaux de bord, visualisation de données, calcul scientifique"
     },
     "service3": {
-      "title": "Automatisation statistique",
-      "description": "Transformez les tâches analytiques répétitives en flux de travail automatisés. Entrez vos données et recevez des analyses statistiques complètes, des visualisations prêtes pour publication et des résultats de modèles. Nous nous spécialisons dans l'automatisation de modèles physiques et de procédures statistiques pour des rapports systématiques et le contrôle qualité dans des contextes de recherche et opérationnels.",
-      "keywords": "Automatisation, recherche reproductible, calcul statistique, optimisation de flux de travail"
+      "title": "Modélisation physique",
+      "description": "Modèles mécanistes fondés sur les lois physiques — conservation de la masse et de l'énergie, transport, cinétique des réactions — pour les systèmes naturels tels que l'eau, le sol et le sous-sol. Lorsque les données le permettent, nous couplons ces modèles fondés sur les processus à des composantes pilotées par les données et à la programmation différentiable, afin de les calibrer sur les observations et d'en quantifier l'incertitude, tout en restant physiquement interprétables plutôt que des boîtes noires.",
+      "keywords": "Modélisation par processus, simulation différentiable, problèmes inverses, assimilation de données, quantification de l'incertitude"
     }
   },
   "home": {

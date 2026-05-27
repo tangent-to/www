@@ -1,6 +1,6 @@
 ---
 title: "Tangent Notebooks"
-description: "Environnement notebook leger pour JavaScript"
+description: "Environnement notebook léger pour JavaScript"
 date: 2025-10-01
 draft: false
 demoURL: ""
@@ -15,7 +15,7 @@ tech:
 
 → [notebook.tangent.to](http://notebook.tangent.to)
 
-## Le Problème
+## Le problème
 
 ObservableHQ offre une interface magnifique pour les notebooks computationnels JavaScript. Bien que son approche de verrouillage soit susceptible de changer, les notebooks ne peuvent pas être sauvegardés localement pour une utilisation future et l'interface ne peut pas être utilisée hors ligne. Il existe un besoin pour des notebooks JavaScript simples destinés à l'exploration de données, au calcul scientifique, au développement algorithmique et aux arts.
 

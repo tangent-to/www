@@ -13,5 +13,12 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
+  },
+  vite: {
+    server: {
+      watch: {
+        ignored: ["!**/public/**"]
+      }
+    }
   }
 });

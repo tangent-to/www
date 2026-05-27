@@ -1,6 +1,6 @@
 ---
-title: "Analyse automatisee de l'ionome"
-description: "Flux de travail automatise pour l'analyse ionomique"
+title: "Analyse automatisée de l'ionome"
+description: "Flux de travail automatisé pour l'analyse ionomique"
 date: 2023-06-20
 draft: false
 demoURL: ""
@@ -26,7 +26,7 @@ Ionomica est un flux de travail computationnel automatisé qui traite les donné
 
 Le système met en œuvre les meilleures pratiques de la recherche agronomique et de l'analyse statistique, assurant la rigueur méthodologique tout en réduisant considérablement le temps d'analyse.
 
-## Mise en oeuvre technique
+## Mise en œuvre technique
 
 - Pipeline statistique basé sur Python
 - Sélection automatisée de modèles d'apprentissage automatique et optimisation des hyperparamètres
