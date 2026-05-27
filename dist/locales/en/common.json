@@ -19,14 +19,14 @@
       "keywords": "Machine learning, dose-response modeling, time series analysis, neural networks"
     },
     "service2": {
-      "title": "Interactive Scientific Applications",
-      "description": "Custom web applications that transform complex analyses into accessible tools for researchers, farmers, and decision-makers. We build interactive dashboards and interfaces using modern frameworks like Marimo and Observable, making sophisticated models usable in real-world contexts.",
-      "keywords": "Web applications, dashboards, data visualization, scientific computing"
+      "title": "Physics-Based Modeling",
+      "description": "Mechanistic models grounded in physical laws for natural systems such as water, soil, and the subsurface. Where the data allow, we couple these process-based models with data-driven components and differentiable programming, so they can be calibrated against observations and quantify their own uncertainty while remaining physically interpretable rather than black boxes.",
+      "keywords": "Process-based modeling, differentiable simulation, inverse problems, data assimilation, uncertainty quantification"
     },
     "service3": {
-      "title": "Physics-Based Modeling",
-      "description": "Mechanistic models grounded in physical laws — conservation of mass and energy, transport, reaction kinetics — for natural systems such as water, soil, and the subsurface. Where the data allow, we couple these process-based models with data-driven components and differentiable programming, so they can be calibrated against observations and quantify their own uncertainty while remaining physically interpretable rather than black boxes.",
-      "keywords": "Process-based modeling, differentiable simulation, inverse problems, data assimilation, uncertainty quantification"
+      "title": "Reproducible Production Environments",
+      "description": "Bringing scientific models and analyses from research code to robust, reproducible production environments. The work centres on computational reproducibility: controlled environments with pinned dependencies, full provenance of data and results, and automated, resource-aware execution, so that analyses run reliably and can be reproduced exactly rather than remaining one-off scripts.",
+      "keywords": "MLOps, computational reproducibility, provenance, dependency control, automated execution"
     }
   },
   "home": {
@@ -37,7 +37,7 @@
     "recentProjects": "Recent projects",
     "seeAllProjects": "See all projects",
     "letsConnect": "Let's Connect",
-    "reachOut": "If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email."
+    "reachOut": "If you want to get in touch with me about something or just to say hi, send me an email."
   },
   "projects": {
     "demo": "Demo",

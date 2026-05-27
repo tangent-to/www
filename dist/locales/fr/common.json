@@ -19,14 +19,14 @@
       "keywords": "Apprentissage automatique, modélisation dose-réponse, analyse de séries temporelles, réseaux neuronaux"
     },
     "service2": {
-      "title": "Applications scientifiques interactives",
-      "description": "Applications web personnalisées qui transforment des analyses complexes en outils accessibles pour chercheurs, agriculteurs et décideurs. Nous construisons des tableaux de bord et interfaces interactives utilisant des frameworks modernes comme Marimo et Observable, rendant les modèles sophistiqués utilisables dans des contextes réels.",
-      "keywords": "Applications web, tableaux de bord, visualisation de données, calcul scientifique"
+      "title": "Modélisation physique",
+      "description": "Modèles mécanistes fondés sur les lois physiques pour les systèmes naturels tels que l'eau, le sol et le sous-sol. Lorsque les données le permettent, nous couplons ces modèles fondés sur les processus à des composantes pilotées par les données et à la programmation différentiable, afin de les calibrer sur les observations et d'en quantifier l'incertitude, tout en restant physiquement interprétables plutôt que des boîtes noires.",
+      "keywords": "Modélisation par processus, simulation différentiable, problèmes inverses, assimilation de données, quantification de l'incertitude"
     },
     "service3": {
-      "title": "Modélisation physique",
-      "description": "Modèles mécanistes fondés sur les lois physiques — conservation de la masse et de l'énergie, transport, cinétique des réactions — pour les systèmes naturels tels que l'eau, le sol et le sous-sol. Lorsque les données le permettent, nous couplons ces modèles fondés sur les processus à des composantes pilotées par les données et à la programmation différentiable, afin de les calibrer sur les observations et d'en quantifier l'incertitude, tout en restant physiquement interprétables plutôt que des boîtes noires.",
-      "keywords": "Modélisation par processus, simulation différentiable, problèmes inverses, assimilation de données, quantification de l'incertitude"
+      "title": "Environnements de production reproductibles",
+      "description": "Faire passer les modèles et analyses scientifiques du code de recherche à des environnements de production robustes et reproductibles. Le travail est centré sur la reproductibilité computationnelle : environnements contrôlés à dépendances figées, provenance complète des données et des résultats, exécution automatisée et maîtrisée en ressources, afin que les analyses s'exécutent de manière fiable et puissent être reproduites à l'identique plutôt que de rester des scripts ponctuels.",
+      "keywords": "Reproductibilité computationnelle, provenance, maîtrise des dépendances, exécution automatisée, robustesse"
     }
   },
   "home": {
@@ -37,7 +37,7 @@
     "recentProjects": "Projets récents",
     "seeAllProjects": "Voir tous les projets",
     "letsConnect": "Restons en contact",
-    "reachOut": "Si vous souhaitez me contacter pour quelque chose ou simplement pour dire bonjour, contactez-moi sur les réseaux sociaux ou envoyez-moi un e-mail."
+    "reachOut": "Si vous souhaitez me contacter pour quelque chose ou simplement pour dire bonjour, envoyez-moi un courriel."
   },
   "projects": {
     "demo": "Démo",
