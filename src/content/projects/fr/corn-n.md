@@ -35,7 +35,8 @@ Deux modes d'utilisation sont pris en charge et rapportés séparément :
 - Prédiction séparée du potentiel du site, combinée multiplicativement à la forme de la réponse
 - Calibration conforme pour des intervalles de prédiction honnêtes et sans hypothèse de distribution
 - Découpage entraînement/test stratifié par projet et prévention stricte des fuites de données
-- Interface interactive (Marimo) permettant aux agronomes d'explorer des scénarios
+- Interface interactive (Gradio) permettant aux agronomes d'explorer des scénarios
+- Déploiement par conteneur Docker
 
 ## État actuel
 
