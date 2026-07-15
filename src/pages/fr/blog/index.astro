@@ -3,11 +3,12 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
-import { BLOG } from "@consts";
 import { t } from "@lib/i18n";
 
+const currentLang = "fr";
+
 const data = (await getCollection("blog"))
-  .filter(post => !post.data.draft && post.id.startsWith("en/"))
+  .filter(post => !post.data.draft && post.id.startsWith("fr/"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 type Acc = {
@@ -24,14 +25,15 @@ const posts = data.reduce((acc: Acc, post) => {
   }, {});
 
 const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
+const description = "Notes pour bien modéliser : reproductibilité, modèles différentiables et rigueur en apprentissage automatique.";
 ---
 
-<PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+<PageLayout title={t("nav.writing", currentLang)} description={description}>
   <Container>
     <div class="space-y-10">
       <div class="animate space-y-4">
-        <h1 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("nav.writing", "en")}</h1>
-        <p class="text-lg text-stone-600 dark:text-stone-400 max-w-2xl">{BLOG.DESCRIPTION}</p>
+        <h1 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("nav.writing", currentLang)}</h1>
+        <p class="text-lg text-stone-600 dark:text-stone-400 max-w-2xl">{description}</p>
       </div>
       <div class="space-y-8">
         {years.map(year => (

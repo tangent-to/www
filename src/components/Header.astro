@@ -1,6 +1,5 @@
 ---
 import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
 import LanguageSwitcher from "@components/LanguageSwitcher.astro";
 import { SITE } from "@consts";
 import { t } from "@lib/i18n";
@@ -10,40 +9,24 @@ const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith('/fr') ? 'fr' : 'en';
 const langPrefix = currentLang === 'fr' ? '/fr' : '';
 const homeHref = langPrefix === '' ? '/' : langPrefix;
+
+const navLink = "text-stone-600 hover:text-tangent-600 dark:text-stone-400 dark:hover:text-tangent-400 transition-colors";
 ---
 
 <header>
   <Container>
-    <div class="flex flex-wrap gap-y-2 items-center justify-between">
-      <Link href={homeHref} underline={false} class="flex items-center">
-        <img 
-          src="/logo-light.svg" 
-          alt={SITE.NAME}
-          class="h-8 dark:hidden whitespace-nowrap"
-        />
-        <img 
-          src="/logo-dark.svg" 
-          alt={SITE.NAME}
-          class="hidden h-8 dark:block whitespace-nowrap"
-        />
-      </Link>
-      <div class="flex items-center gap-3">
-        <nav class="flex gap-1">
-          <Link href={`${langPrefix}/projects`}>
-            {t("nav.projects", currentLang)}
-          </Link>
-          <span>
-            {`/`}
-          </span>
-          <Link href={`${langPrefix}/about`}>
-            {t("nav.about", currentLang)}
-          </Link>
-          <span>
-            {`/`}
-          </span>
-          <Link href={`${langPrefix}/contact`}>
-            {t("nav.contact", currentLang)}
-          </Link>
+    <div class="flex items-center justify-between">
+      <a href={homeHref} aria-label={SITE.NAME} class="flex items-center">
+        <img src="/logo-light.svg" alt={SITE.NAME} class="h-7 w-auto dark:hidden" />
+        <img src="/logo-dark.svg" alt={SITE.NAME} class="h-7 w-auto hidden dark:block" />
+      </a>
+
+      <div class="flex items-center gap-5 sm:gap-6">
+        <nav class="flex items-center gap-5 sm:gap-6 font-sans text-sm">
+          <a href={`${langPrefix}/projects`} class={navLink}>{t("nav.projects", currentLang)}</a>
+          <a href={`${langPrefix}/blog`} class={navLink}>{t("nav.writing", currentLang)}</a>
+          <a href={`${langPrefix}/about`} class={`hidden sm:inline ${navLink}`}>{t("nav.about", currentLang)}</a>
+          <a href={`${langPrefix}/contact`} class={navLink}>{t("nav.contact", currentLang)}</a>
         </nav>
         <LanguageSwitcher />
       </div>

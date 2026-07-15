@@ -8,10 +8,10 @@ import BackToPrev from "@components/BackToPrev.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog"))
-    .filter(post => !post.data.draft && post.id.startsWith("en/"))
+    .filter(post => !post.data.draft && post.id.startsWith("fr/"))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return posts.map((post) => ({
-    params: { slug: post.slug.replace("en/", "") },
+    params: { slug: post.slug.replace("fr/", "") },
     props: post,
   }));
 }
@@ -24,8 +24,8 @@ const { Content } = await post.render();
 <PageLayout title={post.data.title} description={post.data.description}>
   <Container>
     <div class="animate">
-      <BackToPrev href="/blog">
-        Back to writing
+      <BackToPrev href="/fr/blog">
+        Retour aux écrits
       </BackToPrev>
     </div>
     <div class="space-y-1 my-10">

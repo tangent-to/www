@@ -9,29 +9,29 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "tangent.to - consultants in data science.",
+  TITLE: "Tangent",
+  DESCRIPTION: "Scientific machine learning and physics-based modeling, with open-source tools for reproducible scientific computing.",
 };
 
 export const BLOG: Metadata = {
-  TITLE: "Blog",
-  DESCRIPTION: "Updates and insights on our data science projects and methods.",
+  TITLE: "Writing",
+  DESCRIPTION: "Notes on getting modeling right: reproducibility, differentiable models, and machine-learning rigor.",
 };
 
 export const WORK: Metadata = {
   TITLE: "Work",
-  DESCRIPTION: "Selected client engagements and long-running collaborations.",
+  DESCRIPTION: "Selected applied and professional projects.",
 };
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
-  DESCRIPTION: "A collection of ours projects, with links to repositories and demos.",
+  DESCRIPTION: "Applied and professional projects in scientific machine learning and physics-based modeling.",
 };
 
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "github",
-    HREF: "https://github.com/tangent-studio"
+    HREF: "https://github.com/tangent-to"
   },
   { 
     NAME: "linkedin",

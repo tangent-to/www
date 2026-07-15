@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Placeholder screenshot of a tangent notebook">
+  <rect x="14" y="14" width="1172" height="572" rx="22" fill="none" stroke="#a8a29e" stroke-width="3" stroke-dasharray="12 10"/>
+  <rect x="70" y="90" width="1060" height="60" rx="10" fill="#a8a29e" opacity="0.18"/>
+  <rect x="70" y="180" width="1060" height="150" rx="10" fill="#0fae8f" opacity="0.12"/>
+  <rect x="70" y="360" width="700" height="40" rx="8" fill="#a8a29e" opacity="0.18"/>
+  <rect x="70" y="420" width="900" height="40" rx="8" fill="#a8a29e" opacity="0.18"/>
+  <text x="600" y="540" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="22" fill="#78716c">PLACEHOLDER — tangent/notebook interface</text>
+</svg>

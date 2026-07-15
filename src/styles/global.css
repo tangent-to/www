@@ -19,18 +19,31 @@ body {
 body {
   @apply font-serif antialiased;
   @apply flex flex-col;
-  @apply bg-stone-100 dark:bg-stone-900;
-  @apply text-black/50 dark:text-white/75;
+  @apply bg-stone-50 dark:bg-stone-950;
+  @apply text-stone-700 dark:text-stone-300;
 }
 
 header {
-  @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-stone-100/75 dark:bg-stone-900/25;
-  @apply backdrop-blur-sm saturate-200;
+  @apply fixed top-0 left-0 right-0 z-50 py-4;
+  @apply bg-stone-50/80 dark:bg-stone-950/70;
+  @apply backdrop-blur border-b border-stone-200/70 dark:border-stone-800/70;
 }
 
 main {
-  @apply flex-1 py-32;
+  @apply flex-1 pt-24 pb-24;
+}
+
+/* Subtle blueprint grid for the hero. Barely visible, just enough texture. */
+.blueprint {
+  background-image:
+    linear-gradient(to right, rgba(4, 139, 116, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(4, 139, 116, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dark .blueprint {
+  background-image:
+    linear-gradient(to right, rgba(40, 201, 168, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(40, 201, 168, 0.06) 1px, transparent 1px);
 }
 
 footer {
@@ -50,13 +63,13 @@ article {
 
 @layer utilities {
   article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
+    @apply font-sans underline underline-offset-2;
+    @apply text-tangent-700 dark:text-tangent-400;
+    @apply decoration-tangent-700/30 dark:decoration-tangent-400/30;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
+    @apply decoration-tangent-700 dark:decoration-tangent-400;
   }
 }
 
@@ -67,6 +80,14 @@ article {
 
 .animate.show {
   @apply opacity-100 translate-y-0;
+}
+
+/* Respect reduced-motion: reveal everything immediately, no transform. */
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    @apply opacity-100 translate-y-0;
+    transition: none;
+  }
 }
 
 html #back-to-top {

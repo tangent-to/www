@@ -1,46 +1,33 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import { SITE } from "@consts";
+import { SITE, SOCIALS } from "@consts";
+
+const github = SOCIALS.find((s) => s.NAME === "github")?.HREF ?? "#";
+const linkedin = SOCIALS.find((s) => s.NAME === "linkedin")?.HREF ?? "#";
 ---
 
-<PageLayout title="Contact" description="Discutons de votre projet">
+<PageLayout title="Contact" description="Contacter Tangent">
   <Container>
-    <div class="space-y-10">
+    <div class="max-w-2xl space-y-8">
       <div class="animate space-y-4">
-        <h1 class="animate text-2xl font-semibold text-black dark:text-white">
-          Discutons de Votre Projet
-        </h1>
-        <p class="animate">
-          Pour des demandes concernant les services de consultation, collaborations ou discussions de projet:
+        <h1 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">Contact</h1>
+        <p class="text-lg leading-relaxed text-stone-600 dark:text-stone-300">
+          Le mieux est de m'écrire par courriel, que ce soit pour une collaboration, un problème de modélisation ou une question sur les outils libres.
         </p>
       </div>
 
-      <div class="animate space-y-4">
-        <h2 class="text-xl font-semibold text-black dark:text-white">
-          Contact
-        </h2>
-        <p>
-          Courriel: <a href={`mailto:${SITE.EMAIL}`} class="underline">{SITE.EMAIL}</a>
-        </p>
+      <div class="animate space-y-3 font-sans text-sm">
+        <a href={`mailto:${SITE.EMAIL}`} class="text-base font-medium text-tangent-700 dark:text-tangent-400 hover:underline">{SITE.EMAIL}</a>
+        <div class="flex gap-4">
+          <a href={linkedin} class="text-stone-500 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors">LinkedIn</a>
+          <a href={github} class="text-stone-500 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors">GitHub</a>
+        </div>
       </div>
 
-      <div class="animate space-y-4">
-        <h2 class="text-xl font-semibold text-black dark:text-white">
-          Domaines d'Expertise
-        </h2>
-        <ul class="list-disc list-inside space-y-2 ml-4">
-          <li>Modélisation et prédiction agricole</li>
-          <li>Analyse de données écologiques</li>
-          <li>Automatisation de flux de travail statistiques</li>
-          <li>Apprentissage automatique pour sciences de la vie</li>
-          <li>Applications scientifiques interactives</li>
-        </ul>
-      </div>
-
-      <div class="animate space-y-4">
-        <p>
-          Je travaille avec des institutions de recherche, organisations agricoles et agences gouvernementales sur des projets de science des données et modélisation en agriculture, écologie et sciences environnementales.
+      <div class="animate border-t border-stone-200 dark:border-stone-800 pt-8">
+        <p class="text-stone-600 dark:text-stone-400">
+          L'essentiel de mon travail porte sur l'apprentissage automatique scientifique et la modélisation physique pour l'agriculture, l'écologie, l'hydrologie et les sciences de la Terre, conçu pour être reproductible et tourner en production.
         </p>
       </div>
     </div>

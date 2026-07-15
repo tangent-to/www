@@ -6,14 +6,19 @@ type Props = {
 }
 
 const { entry } = Astro.props;
+
+// Entries live in `en/` or `fr/` folders. Build a language-correct URL.
+const langPrefix = entry.id.startsWith("fr/") ? "/fr" : "";
+const slug = entry.slug.replace(/^(en|fr)\//, "");
+const href = `${langPrefix}/${entry.collection}/${slug}`;
 ---
 
-<a href={`/${entry.collection}/${entry.slug}`} class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+<a href={href} class="relative group flex flex-nowrap py-4 px-5 pr-10 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors duration-300 ease-in-out">
   <div class="flex flex-col flex-1 truncate">
-    <div class="font-semibold">
+    <div class="font-sans font-semibold text-stone-900 dark:text-white group-hover:text-tangent-700 dark:group-hover:text-tangent-400 transition-colors">
       {entry.data.title}
     </div>
-    <div class="text-sm">
+    <div class="text-sm text-stone-600 dark:text-stone-400 truncate">
       {entry.data.description}
     </div>
   </div>

@@ -1,11 +1,15 @@
 ---
 import "../styles/global.css";
-import "@fontsource/inter/latin-400.css";
-import "@fontsource/inter/latin-600.css";
+import "@fontsource/geist-sans/latin-400.css";
+import "@fontsource/geist-sans/latin-500.css";
+import "@fontsource/geist-sans/latin-600.css";
+import "@fontsource/geist-mono/latin-400.css";
+import "@fontsource/geist-mono/latin-500.css";
 import "@fontsource/lora/400.css";
 import "@fontsource/lora/600.css";
-import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
-import inter600 from "@fontsource/inter/files/inter-latin-600-normal.woff2";
+import geist400 from "@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2";
+import geist600 from "@fontsource/geist-sans/files/geist-sans-latin-600-normal.woff2";
+import geistMono400 from "@fontsource/geist-mono/files/geist-mono-latin-400-normal.woff2";
 import lora400 from "@fontsource/lora/files/lora-latin-400-normal.woff2";
 import lora600 from "@fontsource/lora/files/lora-latin-600-normal.woff2";
 
@@ -32,8 +36,9 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin/>
-<link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={geist400} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={geist600} as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href={geistMono400} as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href={lora400} as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href={lora600} as="font" type="font/woff2" crossorigin/>
 
@@ -117,12 +122,17 @@ const { title, description, image = "/nano.png" } = Astro.props;
   }
 
   function animate() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const animateElements = document.querySelectorAll(".animate");
 
     animateElements.forEach((element, index) => {
+      if (reduce) {
+        element.classList.add("show");
+        return;
+      }
       setTimeout(() => {
         element.classList.add("show");
-      }, index * 150);
+      }, Math.min(index * 90, 540));
     });
   }
 

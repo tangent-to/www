@@ -5,9 +5,10 @@ const currentLang = currentPath.startsWith('/fr') ? 'fr' : 'en';
 const getOppositeUrl = () => {
   if (currentLang === 'en') {
     return '/fr' + currentPath;
-  } else {
-    return currentPath.replace('/fr', '');
   }
+  // Strip only the leading `/fr` prefix; fall back to `/` for the FR home
+  // (`/fr` -> `''` would otherwise be an empty href that reloads the page).
+  return currentPath.replace(/^\/fr(?=\/|$)/, '') || '/';
 };
 
 ---

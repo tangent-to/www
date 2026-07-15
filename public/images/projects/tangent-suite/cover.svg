@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Placeholder image for tangent/suite">
+  <rect x="14" y="14" width="1172" height="572" rx="22" fill="none" stroke="#a8a29e" stroke-width="3" stroke-dasharray="12 10"/>
+  <line x1="120" y1="470" x2="1080" y2="150" stroke="#0fae8f" stroke-width="3" opacity="0.5"/>
+  <circle cx="600" cy="310" r="8" fill="#0fae8f"/>
+  <text x="600" y="286" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="36" fill="#78716c" letter-spacing="3">PLACEHOLDER</text>
+  <text x="600" y="360" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="22" fill="#a8a29e">tangent/suite — cover image</text>
+</svg>
