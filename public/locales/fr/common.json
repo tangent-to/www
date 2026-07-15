@@ -42,7 +42,7 @@
   },
   "tools": {
     "heading": "La suite tangent/",
-    "intro": "Le travail dont je suis le plus fier : une suite libre qui rend le calcul scientifique reproductible et sans installation. Sept paquets JavaScript, conçus de bout en bout et validés contre les outils de référence de R et Python. Voici les trois sur lesquels je m'appuie le plus.",
+    "intro": "Le travail dont je suis le plus fier : une suite libre qui rend le calcul scientifique reproductible et sans installation. Sept modules JavaScript, validés contre les outils de référence de R et Python. Une bibliothèque de science des données, un moteur bayésien et l'interface note qui les réunit.",
     "dsDesc": "Boîte à outils de science des données pour JavaScript : ordination, regroupement, statistiques classiques et apprentissage automatique. L'ergonomie de scikit-learn et du tidyverse, testée contre les deux.",
     "dsLink": "Documentation",
     "notebookDesc": "Carnets de calcul locaux qui exécutent JavaScript dans le navigateur via WebAssembly. Aucun serveur, fonctionne hors ligne, vos fichiers restent chez vous.",

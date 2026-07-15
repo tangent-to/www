@@ -42,7 +42,7 @@
   },
   "tools": {
     "heading": "The tangent/ suite",
-    "intro": "The work I'm proudest of: an open-source suite that makes scientific computing reproducible and install-free. Seven JavaScript packages, built end to end and tested against the reference tools in R and Python. Below are the three I lean on most.",
+    "intro": "The work I'm proudest of: an open-source suite that makes scientific computing reproducible and install-free. Seven JavaScript modules, tested against the reference tools in R and Python. A data-science library, a Bayesian engine, and the note interface that ties them together.",
     "dsDesc": "Data-science toolkit for JavaScript: ordination, clustering, classical stats and ML. The ergonomics of scikit-learn and the tidyverse, tested against both.",
     "dsLink": "Documentation",
     "notebookDesc": "Local-first computational notebooks that run JavaScript in the browser via WebAssembly. No server, works offline, your files stay on your machine.",
