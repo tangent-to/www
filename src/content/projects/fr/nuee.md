@@ -2,6 +2,7 @@
 title: "`nuee` - Analyse multivariée en écologie"
 description: "Analyse multivariée en écologie"
 date: 2025-07-07
+featured: 5
 draft: false
 demoURL: ""
 repoURL: ""
@@ -13,11 +14,11 @@ tech:
 ---
 
 ## Site de documentation
-→ [essicolo.github.io/nuee](essicolo.github.io/nuee)
+[essicolo.github.io/nuee](https://essicolo.github.io/nuee)
 
 ## Le problème
 
-L'analyse des communautés écologiques nécessite des méthodes statistiques multivariées spécialisées — ordinations, indices de diversité, tests de permutation — qui sont bien établies dans l'écosystème R (notamment avec le package *vegan*). Cependant, les chercheurs travaillant en Python manquent d'outils équivalents robustes et complets. Les implémentations existantes sont fragmentées, incomplètes ou difficiles à utiliser, forçant les écologistes à jongler entre R et Python ou à réimplémenter des méthodes complexes. Il existe un besoin pour une bibliothèque Python complète, fidèle aux standards de l'écologie numérique, et compatible avec l'écosystème scientifique Python moderne.
+L'écologie des communautés repose sur une boîte à outils bien précise de méthodes multivariées (ordinations, indices de diversité, tests de permutation), et en R cette boîte est mature, surtout dans le package *vegan*. Python n'a pas de véritable équivalent. Ce qui existe est fragmenté ou incomplet, si bien que les écologistes finissent par changer de langage ou par réimplémenter à la main des méthodes standard.
 
 ## L'approche
 

@@ -2,6 +2,7 @@
 title: "Automated Plant Ionomics Analysis"
 description: "Comprehensive automated workflow for science-based ionomics analysis in agricultural research"
 date: 2023-06-20
+featured: 6
 draft: false
 demoURL: ""
 repoURL: ""
@@ -14,18 +15,18 @@ tech:
 
 ## The Problem
 
-Plant ionomics — the quantitative analysis of elemental composition in plant tissues — generates complex multivariate datasets requiring sophisticated statistical treatment. Manual analysis is time-consuming, error-prone, and often lacks consistency across studies. Researchers in ionomics need automated, reproducible workflows that apply appropriate statistical methods and generate publication-ready results.
+Plant ionomics measures the elemental composition of plant tissues, and the data comes out wide and multivariate. Done by hand, the analysis is slow, easy to get wrong, and rarely consistent from one study to the next. The field needs a workflow that applies the right statistics the same way every time and produces results ready to publish.
 
 ## The Approach
 
-Ionomica is an automated computational workflow that processes raw ionomics data through a comprehensive analytical pipeline:
+Ionomica takes raw ionomics data through a single automated pipeline:
 
 - Data validation and quality control
 - Statistical modeling (mixed models, generalized additive models, multivariate analysis, machine learning)
 - Automated visualization generation
 - Reproducible research documentation
 
-The system implements best practices from agronomic research and statistical analysis, ensuring methodological rigor while dramatically reducing analysis time.
+It follows established practice in agronomy and statistics, so the analysis stays rigorous while taking a fraction of the manual effort.
 
 ## Technical Implementation
 

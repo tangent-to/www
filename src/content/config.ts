@@ -10,16 +10,6 @@ const blog = defineCollection({
   }),
 });
 
-const work = defineCollection({
-  type: "content",
-  schema: z.object({
-    company: z.string(),
-    role: z.string(),
-    dateStart: z.coerce.date(),
-    dateEnd: z.union([z.coerce.date(), z.string()]),
-  }),
-});
-
 const projects = defineCollection({
   type: "content",
   schema: z.object({
@@ -31,6 +21,10 @@ const projects = defineCollection({
     repoURL: z.string().optional(),
     // Additional fields for better project display
     image: z.string().optional(),
+    // Curated prominence: lower sorts first. Projects without a value fall
+    // back to date order. Lets positioning reflect what the work is, not
+    // when it was last touched.
+    featured: z.number().optional(),
     // Hero image on the project detail page. Falls back to `image` when
     // omitted; set `hero: ""` to explicitly show no hero image.
     hero: z.string().optional(),
@@ -38,4 +32,4 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { blog, work, projects };
+export const collections = { blog, projects };

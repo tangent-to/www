@@ -2,6 +2,7 @@
 title: "`meandre` - Differentiable Hydrology"
 description: "Process-based hydrological modeling with automatic differentiation for gradient-based calibration and hybrid physics-AI models"
 date: 2026-02-15
+featured: 2
 draft: false
 demoURL: ""
 repoURL: ""
@@ -14,7 +15,7 @@ tech:
 
 ## The Problem
 
-Process-based hydrological models encode our physical understanding of how water moves through a catchment, but they are notoriously difficult to calibrate. Their parameters are often estimated by derivative-free optimization, an approach that scales poorly as the number of parameters grows and reveals little about how each parameter shapes the simulation. Conversely, purely data-driven models can fit observations well while ignoring physical constraints such as mass conservation, which limits their reliability outside the range of the training data.
+Process-based hydrological models encode what we know about how water moves through a catchment, but they are hard to calibrate. Their parameters are usually fit by derivative-free optimization, which scales badly as parameters multiply and says little about how each one shapes the result. Purely data-driven models have the opposite problem: they can match observations while quietly violating physical constraints like mass conservation, so they stop being reliable outside the range they were trained on.
 
 ## The Approach
 

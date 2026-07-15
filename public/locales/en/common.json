@@ -1,43 +1,83 @@
 {
   "nav": {
     "home": "Home",
-    "blog": "blog",
-    "work": "work",
+    "blog": "Writing",
+    "writing": "Writing",
+    "work": "Work",
     "projects": "Projects",
     "about": "About",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Mathematics for Natural Sciences",
-    "subtitle": "Science-based data science and AI consulting for agriculture, ecology, geology and environmental research"
+    "eyebrow": "Scientific machine learning / the physics-ML interface",
+    "title": "Deep learning anchored in physics",
+    "subtitle": "Computational science and ML engineering, where rigorous modeling comes to production.",
+    "ctaWork": "See my work",
+    "ctaContact": "Get in touch"
   },
-  "services": {
-    "title": "Services",
-    "service1": {
-      "title": "Predictive Modeling & Workflows",
-      "description": "Advanced statistical models and machine learning pipelines for investigating patterns and predicting outcomes in living systems. From investigation with advanced biostatistics to predictions with machine learning, we develop computational workflows that transform complex ecological and agricultural data into science-based decision making processes.",
-      "keywords": "Machine learning, dose-response modeling, time series analysis, neural networks"
+  "work": {
+    "heading": "Applied and professional work",
+    "badgeClient": "Client · CRAAQ",
+    "badgePaid": "Paid, led",
+    "badgeGov": "Government",
+    "badgeOss": "Open source",
+    "badgePreview": "Unreleased preview",
+    "cornN": {
+      "title": "Corn nitrogen response",
+      "desc": "Site-specific nitrogen dose-response curves, pairing canonical agronomic forms with statistical learning, plus an honest measure of how far each curve can be trusted. Separates site potential from response shape instead of black-box regression."
     },
-    "service2": {
-      "title": "Physics-Based Modeling",
-      "description": "Mechanistic models grounded in physical laws for natural systems such as water, soil, and the subsurface. Where the data allow, we couple these process-based models with data-driven components and differentiable programming, so they can be calibrated against observations and quantify their own uncertainty while remaining physically interpretable rather than black boxes.",
-      "keywords": "Process-based modeling, differentiable simulation, inverse problems, data assimilation, uncertainty quantification"
+    "meandre": {
+      "title": "meandre",
+      "desc": "Differentiable hydrology. Process-based catchment models written so every flux and storage term is differentiable, enabling gradient-based calibration at scale, identifiable sensitivity analysis, and hybrid models kept physical by conservation laws."
     },
-    "service3": {
-      "title": "Reproducible Production Environments",
-      "description": "Bringing scientific models and analyses from research code to robust, reproducible production environments. The work centres on computational reproducibility: controlled environments with pinned dependencies, full provenance of data and results, and automated, resource-aware execution, so that analyses run reliably and can be reproduced exactly rather than remaining one-off scripts.",
-      "keywords": "MLOps, computational reproducibility, provenance, dependency control, automated execution"
-    }
+    "capillary": {
+      "title": "capyllary",
+      "desc": "Differentiable constitutive laws for unsaturated hydromechanics. A pure Python library for coupled unsaturated flow, poromechanics, and contaminant transport, differentiable end to end for adjoint-based calibration, running in a marimo notebook with nothing to install."
+    },
+    "badgeExperimental": "Experimental",
+    "moreHeading": "More work",
+    "moreNuee": "nuee, multivariate ecology in Python",
+    "moreIonomics": "Plant ionomics workflow",
+    "moreAll": "All projects"
+  },
+  "tools": {
+    "heading": "The tangent/ suite",
+    "intro": "The work I'm proudest of: an open-source suite that makes scientific computing reproducible and install-free. Seven JavaScript packages, built end to end and tested against the reference tools in R and Python. Below are the three I lean on most.",
+    "dsDesc": "Data-science toolkit for JavaScript: ordination, clustering, classical stats and ML. The ergonomics of scikit-learn and the tidyverse, tested against both.",
+    "dsLink": "Documentation",
+    "notebookDesc": "Local-first computational notebooks that run JavaScript in the browser via WebAssembly. No server, works offline, your files stay on your machine.",
+    "notebookLink": "note.tangent.to",
+    "mcDesc": "Bayesian inference for JavaScript: probabilistic modeling and MCMC sampling in the browser, so a model can report how sure it is, not just what it predicts.",
+    "mcStatus": "Soon",
+    "mcDev": "Documentation",
+    "suiteLink": "Explore the full suite at suite.tangent.to"
+  },
+  "writing": {
+    "heading": "Notes on getting modeling right",
+    "goblinKicker": "ML rigor",
+    "goblinTitle": "How I killed my own model",
+    "goblinDesc": "I built an automatic mineral prospector, then tried to break it with strict space and time holdouts. It didn't survive, and that's the point. A look at why exploration data quietly teaches models the wrong thing, and how to catch it.",
+    "goblinRead": "Read the post",
+    "more": "More posts on reproducibility, differentiable modeling, and the capyllary build, as the work ships."
+  },
+  "about": {
+    "heading": "Engineering rigor, natural-science context",
+    "body": "I combine the precision of engineering and physics with the messy, nonlinear reality of agricultural, ecological, hydrological and geological systems. My through-line is reproducibility: models and tools that others can rerun, audit, and trust, whether a calibrated hydrological model for a government agency or a notebook that runs with nothing installed. Good science needs good tools, so I build both.",
+    "linkedin": "Full background on LinkedIn",
+    "bgHeading": "Background",
+    "bgPhd": "PhD, Civil Engineering",
+    "bgPostdoc": "Postdoctoral research, agriculture",
+    "bgProf": "Former professor",
+    "bgGov": "Modeling, government (current)"
+  },
+  "contact": {
+    "heading": "Let's talk.",
+    "body": "A modeling problem, a collaboration, or a question about the tools. Get in touch.",
+    "email": "Email me"
   },
   "home": {
-    "latestPosts": "Latest posts",
-    "seeAllPosts": "See all posts",
-    "workExperience": "Work Experience",
-    "seeAllWork": "See all work",
-    "recentProjects": "Recent projects",
-    "seeAllProjects": "See all projects",
-    "letsConnect": "Let's Connect",
-    "reachOut": "If you want to get in touch with me about something or just to say hi, send me an email."
+    "recentProjects": "Applied and professional projects in scientific machine learning and physics-based modeling.",
+    "seeAllProjects": "See all projects"
   },
   "projects": {
     "demo": "Demo",

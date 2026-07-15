@@ -1,0 +1,217 @@
+---
+import Container from "@components/Container.astro";
+import { SITE, SOCIALS } from "@consts";
+import { t } from "@lib/i18n";
+
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.startsWith("/fr") ? "fr" : "en";
+const langPrefix = currentLang === "fr" ? "/fr" : "";
+
+const github = SOCIALS.find((s) => s.NAME === "github")?.HREF ?? "#";
+const linkedin = SOCIALS.find((s) => s.NAME === "linkedin")?.HREF ?? "#";
+
+const flagships = [
+  {
+    title: t("work.cornN.title", currentLang),
+    desc: t("work.cornN.desc", currentLang),
+    mono: false,
+    href: `${langPrefix}/projects/corn-n`,
+    badges: [
+      { label: t("work.badgeClient", currentLang), style: "solid" },
+      { label: t("work.badgePaid", currentLang), style: "soft" },
+    ],
+    tech: ["PyTorch", "GPyTorch", "XGBoost", "Gradio"],
+  },
+  {
+    title: t("work.meandre.title", currentLang),
+    desc: t("work.meandre.desc", currentLang),
+    mono: true,
+    href: `${langPrefix}/projects/meandre`,
+    badges: [
+      { label: t("work.badgeGov", currentLang), style: "solid" },
+      { label: t("work.badgeOss", currentLang), style: "accent" },
+    ],
+    tech: ["PyTorch", "Autodiff", "DuckDB"],
+  },
+];
+
+const tools = [
+  { name: "ds", desc: t("tools.dsDesc", currentLang), linkLabel: t("tools.dsLink", currentLang), href: "https://suite.tangent.to/ds", soon: false },
+  { name: "note", desc: t("tools.notebookDesc", currentLang), linkLabel: t("tools.notebookLink", currentLang), href: "https://note.tangent.to", soon: false },
+  { name: "mc", desc: t("tools.mcDesc", currentLang), linkLabel: t("tools.mcDev", currentLang), href: "https://suite.tangent.to/mc", soon: false },
+];
+
+const background = [
+  t("about.bgPhd", currentLang),
+  t("about.bgPostdoc", currentLang),
+  t("about.bgProf", currentLang),
+  t("about.bgGov", currentLang),
+];
+
+const badgeClass = (style: string) =>
+  style === "solid"
+    ? "bg-stone-900 text-white dark:bg-white dark:text-stone-900 font-medium"
+    : style === "accent"
+    ? "bg-tangent-100 dark:bg-tangent-900/40 text-tangent-700 dark:text-tangent-300"
+    : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300";
+---
+
+<Container>
+  <div class="space-y-20">
+    <!-- HERO: asymmetric split -->
+    <section class="animate relative overflow-hidden rounded-2xl border border-stone-200 dark:border-stone-800">
+      <div class="absolute inset-0 blueprint"></div>
+      <div class="relative grid md:grid-cols-[1.35fr_1fr] gap-8 items-center p-8 sm:p-12">
+        <div>
+          <h1 class="font-serif text-4xl sm:text-5xl leading-[1.1] text-stone-900 dark:text-white">
+            {t("hero.title", currentLang)}
+          </h1>
+          <p class="mt-5 text-lg leading-relaxed text-stone-600 dark:text-stone-400 max-w-xl">
+            {t("hero.subtitle", currentLang)}
+          </p>
+          <div class="mt-7 flex flex-wrap gap-3 font-sans text-sm">
+            <a href="#work" class="inline-flex items-center gap-2 rounded-full bg-tangent-600 hover:bg-tangent-700 text-white px-5 py-2.5 font-medium transition-colors">
+              {t("hero.ctaWork", currentLang)}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="inline-flex items-center rounded-full border border-stone-300 dark:border-stone-700 hover:border-tangent-500 dark:hover:border-tangent-400 px-5 py-2.5 font-medium text-stone-800 dark:text-stone-200 transition-colors">
+              {t("hero.ctaContact", currentLang)}
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img src="/images/hero-tangent.png" alt="" class="w-full h-auto rounded-xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK: asymmetric cards -->
+    <section id="work" class="animate scroll-mt-24">
+      <h2 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("work.heading", currentLang)}</h2>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        {flagships.map((f) => (
+          <a href={f.href} class="group rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-7 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors">
+            <div class="flex flex-wrap gap-2 mb-3 font-sans text-[11px]">
+              {f.badges.map((b) => (
+                <span class={`px-2 py-0.5 rounded-full ${badgeClass(b.style)}`}>{b.label}</span>
+              ))}
+            </div>
+            <h3 class={`${f.mono ? "font-mono" : "font-sans"} text-xl font-semibold text-stone-900 dark:text-white`}>{f.title}</h3>
+            <p class="mt-2.5 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">{f.desc}</p>
+            <div class="mt-4 flex flex-wrap gap-1.5 font-sans">
+              {f.tech.map((tech) => (
+                <span class="text-[11px] px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">{tech}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-4 grid sm:grid-cols-2 gap-4">
+        <a href={`${langPrefix}/projects/capyllary`} class="group rounded-xl border border-dashed border-stone-300 dark:border-stone-700 bg-stone-100/50 dark:bg-stone-900/40 p-7 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors">
+          <div class="flex flex-wrap gap-2 mb-3 font-sans text-[11px]">
+            <span class={`px-2 py-0.5 rounded-full ${badgeClass("accent")}`}>{t("work.badgeOss", currentLang)}</span>
+            <span class={`px-2 py-0.5 rounded-full ${badgeClass("soft")}`}>{t("work.badgeExperimental", currentLang)}</span>
+          </div>
+          <h3 class="font-mono text-xl font-semibold text-stone-800 dark:text-stone-200">{t("work.capillary.title", currentLang)}</h3>
+          <p class="mt-2.5 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">{t("work.capillary.desc", currentLang)}</p>
+          <div class="mt-4 flex flex-wrap gap-1.5 font-sans">
+            <span class="text-[11px] px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">Python</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">marimo</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">Pyodide</span>
+          </div>
+        </a>
+
+        <div class="rounded-xl border border-stone-200 dark:border-stone-800 p-7 flex flex-col justify-center font-sans">
+          <h3 class="text-sm font-semibold uppercase tracking-wide text-stone-500 mb-3">{t("work.moreHeading", currentLang)}</h3>
+          <a href={`${langPrefix}/projects/nuee`} class="text-sm text-stone-700 dark:text-stone-300 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors py-1">{t("work.moreNuee", currentLang)}</a>
+          <a href={`${langPrefix}/projects/ionomica`} class="text-sm text-stone-700 dark:text-stone-300 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors py-1">{t("work.moreIonomics", currentLang)}</a>
+          <a href={`${langPrefix}/projects`} class="text-sm text-stone-500 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors py-1 mt-1">{t("work.moreAll", currentLang)}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TANGENT/ SUITE: divided list -->
+    <section id="tools" class="animate scroll-mt-24">
+      <h2 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("tools.heading", currentLang)}</h2>
+      <p class="mt-3 max-w-2xl text-stone-600 dark:text-stone-400">{t("tools.intro", currentLang)}</p>
+
+      <div class="mt-8 border-y border-stone-200 dark:border-stone-800 divide-y divide-stone-200 dark:divide-stone-800">
+        {tools.map((tool) => (
+          <div class="grid sm:grid-cols-[210px_1fr] gap-x-6 gap-y-2 py-5">
+            <div class="flex items-center gap-2">
+              <span class="font-mono text-lg text-stone-900 dark:text-white"><span class="text-tangent-600 dark:text-tangent-400">tangent/</span>{tool.name}</span>
+              {tool.soon && (
+                <span class="font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-tangent-100 dark:bg-tangent-900/50 text-tangent-700 dark:text-tangent-300">{t("tools.mcStatus", currentLang)}</span>
+              )}
+            </div>
+            <div>
+              <p class="text-sm leading-relaxed text-stone-600 dark:text-stone-400">{tool.desc}</p>
+              {tool.href ? (
+                <a href={tool.href} class="mt-2 inline-block font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 hover:underline">{tool.linkLabel}</a>
+              ) : (
+                <span class="mt-2 inline-block font-sans text-sm text-stone-400 dark:text-stone-600">{tool.linkLabel}</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <a href="https://suite.tangent.to" class="mt-6 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 hover:gap-2.5 transition-all">
+        {t("tools.suiteLink", currentLang)}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+
+    <!-- WRITING: feature + aside -->
+    <section id="writing" class="animate scroll-mt-24">
+      <h2 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("writing.heading", currentLang)}</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <a href={`${langPrefix}/blog/killing-my-own-model`} class="md:col-span-2 group rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-7 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors">
+          <span class="font-sans text-xs text-stone-500">{t("writing.goblinKicker", currentLang)}</span>
+          <h3 class="mt-1 font-serif text-2xl text-stone-900 dark:text-white group-hover:text-tangent-700 dark:group-hover:text-tangent-400 transition-colors">{t("writing.goblinTitle", currentLang)}</h3>
+          <p class="mt-2.5 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">{t("writing.goblinDesc", currentLang)}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 group-hover:gap-2.5 transition-all">
+            {t("writing.goblinRead", currentLang)}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+        <div class="rounded-xl border border-dashed border-stone-300 dark:border-stone-700 p-7 grid place-items-center text-center">
+          <p class="font-sans text-sm text-stone-500">{t("writing.more", currentLang)}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT: text + background -->
+    <section id="about" class="animate scroll-mt-24 grid md:grid-cols-[1.5fr_1fr] gap-10">
+      <div>
+        <h2 class="font-sans text-2xl font-semibold text-stone-900 dark:text-white">{t("about.heading", currentLang)}</h2>
+        <p class="mt-4 leading-relaxed text-stone-600 dark:text-stone-300">{t("about.body", currentLang)}</p>
+        <a href={`${langPrefix}/about`} class="mt-4 inline-block font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 hover:underline">{t("about.linkedin", currentLang)}</a>
+      </div>
+      <div class="font-sans">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-stone-500 mb-4">{t("about.bgHeading", currentLang)}</h3>
+        <ul class="space-y-3">
+          {background.map((item) => (
+            <li class="border-l-2 border-tangent-500/40 pl-3 text-sm text-stone-700 dark:text-stone-300">{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="animate scroll-mt-24 border-t border-stone-200 dark:border-stone-800 pt-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+      <div>
+        <h2 class="font-serif text-3xl text-stone-900 dark:text-white">{t("contact.heading", currentLang)}</h2>
+        <p class="mt-2 max-w-md text-stone-600 dark:text-stone-400">{t("contact.body", currentLang)}</p>
+      </div>
+      <div class="font-sans text-sm flex flex-col gap-2 sm:items-end">
+        <a href={`mailto:${SITE.EMAIL}`} class="text-base font-medium text-tangent-700 dark:text-tangent-400 hover:underline">{SITE.EMAIL}</a>
+        <div class="flex gap-4">
+          <a href={linkedin} class="text-stone-500 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors">LinkedIn</a>
+          <a href={github} class="text-stone-500 hover:text-tangent-600 dark:hover:text-tangent-400 transition-colors">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Container>

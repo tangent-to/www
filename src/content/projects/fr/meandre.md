@@ -2,6 +2,7 @@
 title: "`meandre` - Hydrologie différentiable"
 description: "Modélisation hydrologique par processus avec différentiation automatique pour la calibration par gradient et des modèles hybrides physique-IA"
 date: 2026-02-15
+featured: 2
 draft: false
 demoURL: ""
 repoURL: ""
@@ -14,7 +15,7 @@ tech:
 
 ## Le problème
 
-Les modèles hydrologiques fondés sur les processus encodent notre compréhension physique de la circulation de l'eau dans un bassin versant, mais ils sont notoirement difficiles à calibrer. Leurs paramètres sont souvent estimés par optimisation sans dérivées, une approche qui se généralise mal lorsque le nombre de paramètres augmente et qui renseigne peu sur la façon dont chaque paramètre influence la simulation. À l'inverse, les modèles purement pilotés par les données peuvent bien ajuster les observations tout en ignorant des contraintes physiques comme la conservation de la masse, ce qui limite leur fiabilité hors de la plage des données d'entraînement.
+Les modèles hydrologiques fondés sur les processus encodent ce que l'on sait de la circulation de l'eau dans un bassin versant, mais ils sont difficiles à calibrer. Leurs paramètres sont d'ordinaire ajustés par optimisation sans dérivées, une approche qui se généralise mal quand les paramètres se multiplient et qui renseigne peu sur le rôle de chacun. Les modèles purement pilotés par les données ont le défaut inverse : ils collent aux observations tout en violant discrètement des contraintes physiques comme la conservation de la masse, et cessent d'être fiables hors de la plage d'entraînement.
 
 ## L'approche
 

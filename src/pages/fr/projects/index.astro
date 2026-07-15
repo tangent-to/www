@@ -12,17 +12,23 @@ const projects = (await getCollection("projects", ({ id }) => {
   return id.startsWith(`${currentLang}/`);
 }))
   .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  // Prominence organisée d'abord (plus petit = plus haut), puis par date.
+  .sort((a, b) => {
+    const fa = a.data.featured ?? Infinity;
+    const fb = b.data.featured ?? Infinity;
+    if (fa !== fb) return fa - fb;
+    return b.data.date.valueOf() - a.data.date.valueOf();
+  });
 ---
 
 <PageLayout title={t("nav.projects", currentLang)} description={t("home.recentProjects", currentLang)}>
   <Container>
     <div class="space-y-10">
       <div class="animate space-y-4">
-        <h1 class="text-3xl font-bold text-black dark:text-white">
+        <h1 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">
           {t("nav.projects", currentLang)}
         </h1>
-        <p class="text-lg opacity-90">
+        <p class="text-lg text-stone-600 dark:text-stone-400 max-w-2xl">
           {t("home.recentProjects", currentLang)}
         </p>
       </div>

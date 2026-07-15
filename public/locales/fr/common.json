@@ -1,43 +1,83 @@
 {
   "nav": {
     "home": "Accueil",
-    "blog": "blog",
-    "work": "expérience",
+    "blog": "Écrits",
+    "writing": "Écrits",
+    "work": "Travaux",
     "projects": "Projets",
-    "about": "À Propos",
+    "about": "À propos",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Mathématiques pour les sciences naturelles",
-    "subtitle": "Consultation en science des données et IA fondée sur la science pour l'agriculture, l'écologie, la géologie et la recherche environnementale"
+    "eyebrow": "Apprentissage automatique scientifique / l'interface physique-IA",
+    "title": "L'apprentissage profond ancré dans la physique",
+    "subtitle": "Calcul scientifique et ingénierie en apprentissage automatique, là où la modélisation rigoureuse est mise en production.",
+    "ctaWork": "Voir mes travaux",
+    "ctaContact": "Me contacter"
   },
-  "services": {
-    "title": "Services",
-    "service1": {
-      "title": "Biostatistiques et apprentissage-machine",
-      "description": "Modèles statistiques avancés et pipelines d'apprentissage automatique pour étudier les patterns et prédire les résultats dans les systèmes vivants. De l'investigation à l'aide de biostatistiques avancées à la prédiction par apprentissage-machine, nous développons des flux de travail computationnels qui transforment les données écologiques et agricoles complexes en processus décisionnels fondés sur la science.",
-      "keywords": "Apprentissage automatique, modélisation dose-réponse, analyse de séries temporelles, réseaux neuronaux"
+  "work": {
+    "heading": "Travaux professionnels",
+    "badgeClient": "Client · CRAAQ",
+    "badgePaid": "Mandat dirigé",
+    "badgeGov": "Gouvernement",
+    "badgeOss": "Source ouverte",
+    "badgePreview": "Aperçu, non publié",
+    "cornN": {
+      "title": "Réponse du maïs à l'azote",
+      "desc": "Courbes dose-réponse de l'azote propres au site, alliant des formes agronomiques canoniques à l'apprentissage statistique, avec une mesure honnête de la confiance accordée à chaque courbe. Sépare le potentiel du site de la forme de la réponse plutôt qu'une régression en boîte noire."
     },
-    "service2": {
-      "title": "Modélisation physique",
-      "description": "Modèles mécanistes fondés sur les lois physiques pour les systèmes naturels tels que l'eau, le sol et le sous-sol. Lorsque les données le permettent, nous couplons ces modèles fondés sur les processus à des composantes pilotées par les données et à la programmation différentiable, afin de les calibrer sur les observations et d'en quantifier l'incertitude, tout en restant physiquement interprétables plutôt que des boîtes noires.",
-      "keywords": "Modélisation par processus, simulation différentiable, problèmes inverses, assimilation de données, quantification de l'incertitude"
+    "meandre": {
+      "title": "meandre",
+      "desc": "Hydrologie différentiable. Modèles de bassin fondés sur les processus écrits de sorte que chaque flux et chaque réservoir soit différentiable, permettant une calibration par gradient à grande échelle, une analyse de sensibilité identifiable et des modèles hybrides gardés physiques par les lois de conservation."
     },
-    "service3": {
-      "title": "Environnements de production reproductibles",
-      "description": "Faire passer les modèles et analyses scientifiques du code de recherche à des environnements de production robustes et reproductibles. Le travail est centré sur la reproductibilité computationnelle : environnements contrôlés à dépendances figées, provenance complète des données et des résultats, exécution automatisée et maîtrisée en ressources, afin que les analyses s'exécutent de manière fiable et puissent être reproduites à l'identique plutôt que de rester des scripts ponctuels.",
-      "keywords": "Reproductibilité computationnelle, provenance, maîtrise des dépendances, exécution automatisée, robustesse"
-    }
+    "capillary": {
+      "title": "capyllary",
+      "desc": "Lois constitutives différentiables pour l'hydromécanique non saturée. Une bibliothèque Python pure pour l'écoulement non saturé couplé, la poromécanique et le transport de contaminants, différentiable de bout en bout pour la calibration par adjoint, dans un carnet marimo sans rien à installer."
+    },
+    "badgeExperimental": "Expérimental",
+    "moreHeading": "Autres travaux",
+    "moreNuee": "nuee, analyse multivariée en écologie avec Python",
+    "moreIonomics": "Flux d'analyse ionomique des plantes",
+    "moreAll": "Tous les projets"
+  },
+  "tools": {
+    "heading": "La suite tangent/",
+    "intro": "Le travail dont je suis le plus fier : une suite libre qui rend le calcul scientifique reproductible et sans installation. Sept paquets JavaScript, conçus de bout en bout et validés contre les outils de référence de R et Python. Voici les trois sur lesquels je m'appuie le plus.",
+    "dsDesc": "Boîte à outils de science des données pour JavaScript : ordination, regroupement, statistiques classiques et apprentissage automatique. L'ergonomie de scikit-learn et du tidyverse, testée contre les deux.",
+    "dsLink": "Documentation",
+    "notebookDesc": "Carnets de calcul locaux qui exécutent JavaScript dans le navigateur via WebAssembly. Aucun serveur, fonctionne hors ligne, vos fichiers restent chez vous.",
+    "notebookLink": "note.tangent.to",
+    "mcDesc": "Inférence bayésienne pour JavaScript : modélisation probabiliste et échantillonnage MCMC dans le navigateur, pour qu'un modèle dise à quel point il est sûr, et pas seulement ce qu'il prédit.",
+    "mcStatus": "Bientôt",
+    "mcDev": "Documentation",
+    "suiteLink": "Découvrir la suite complète sur suite.tangent.to"
+  },
+  "writing": {
+    "heading": "Notes pour bien modéliser",
+    "goblinKicker": "Rigueur en AA",
+    "goblinTitle": "Comment j'ai tué mon propre modèle",
+    "goblinDesc": "J'ai construit un prospecteur minier automatique, puis j'ai tenté de le briser avec des retenues strictes dans l'espace et le temps. Il n'a pas survécu, et c'est là tout l'intérêt. Pourquoi les données d'exploration apprennent en douce la mauvaise chose aux modèles, et comment le détecter.",
+    "goblinRead": "Lire l'article",
+    "more": "D'autres articles sur la reproductibilité, la modélisation différentiable et la construction de capyllary, au fil des publications."
+  },
+  "about": {
+    "heading": "Rigueur d'ingénieur, contexte des sciences naturelles",
+    "body": "J'allie la précision du génie et de la physique à la réalité désordonnée et non linéaire des systèmes agricoles, écologiques, hydrologiques et géologiques. Mon fil conducteur est la reproductibilité : des modèles et des outils que d'autres peuvent réexécuter, vérifier et utiliser en confiance, qu'il s'agisse d'un modèle hydrologique calibré pour une agence gouvernementale ou d'un carnet qui fonctionne sans rien installer. La bonne science a besoin de bons outils, alors je construis les deux.",
+    "linkedin": "Parcours complet sur LinkedIn",
+    "bgHeading": "Parcours",
+    "bgPhd": "Doctorat, génie civil",
+    "bgPostdoc": "Recherche postdoctorale, agriculture",
+    "bgProf": "Ancien professeur",
+    "bgGov": "Modélisation, gouvernement (actuel)"
+  },
+  "contact": {
+    "heading": "Discutons.",
+    "body": "Un problème de modélisation, une collaboration ou une question sur les outils. Écrivez-moi.",
+    "email": "M'écrire"
   },
   "home": {
-    "latestPosts": "Derniers articles",
-    "seeAllPosts": "Voir tous les articles",
-    "workExperience": "Expérience professionnelle",
-    "seeAllWork": "Voir toute l'expérience",
-    "recentProjects": "Projets récents",
-    "seeAllProjects": "Voir tous les projets",
-    "letsConnect": "Restons en contact",
-    "reachOut": "Si vous souhaitez me contacter pour quelque chose ou simplement pour dire bonjour, envoyez-moi un courriel."
+    "recentProjects": "Projets professionnels en apprentissage automatique scientifique et modélisation physique.",
+    "seeAllProjects": "Voir tous les projets"
   },
   "projects": {
     "demo": "Démo",
