@@ -54,10 +54,7 @@
   },
   "writing": {
     "heading": "Notes on getting modeling right",
-    "goblinKicker": "ML rigor",
-    "goblinTitle": "How I killed my own model",
-    "goblinDesc": "I built an automatic mineral prospector, then tried to break it with strict space and time holdouts. It didn't survive, and that's the point. A look at why exploration data quietly teaches models the wrong thing, and how to catch it.",
-    "goblinRead": "Read the post",
+    "readPost": "Read the post",
     "more": "More posts on reproducibility, differentiable modeling, and the capyllary build, as the work ships."
   },
   "about": {

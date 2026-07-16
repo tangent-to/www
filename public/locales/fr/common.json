@@ -54,10 +54,7 @@
   },
   "writing": {
     "heading": "Notes pour bien modéliser",
-    "goblinKicker": "Rigueur en AA",
-    "goblinTitle": "Comment j'ai tué mon propre modèle",
-    "goblinDesc": "J'ai construit un prospecteur minier automatique, puis j'ai tenté de le briser avec des retenues strictes dans l'espace et le temps. Il n'a pas survécu, et c'est là tout l'intérêt. Pourquoi les données d'exploration apprennent en douce la mauvaise chose aux modèles, et comment le détecter.",
-    "goblinRead": "Lire l'article",
+    "readPost": "Lire l'article",
     "more": "D'autres articles sur la reproductibilité, la modélisation différentiable et la construction de capyllary, au fil des publications."
   },
   "about": {

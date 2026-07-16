@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import { SITE, SOCIALS } from "@consts";
 import { t } from "@lib/i18n";
@@ -6,6 +7,19 @@ import { t } from "@lib/i18n";
 const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith("/fr") ? "fr" : "en";
 const langPrefix = currentLang === "fr" ? "/fr" : "";
+
+// Feature the most recent post, straight from the blog collection, so the card
+// always matches the real post (title, abstract, link) and follows the latest.
+const latestPost = (await getCollection("blog"))
+  .filter((p) => !p.data.draft && p.id.startsWith(`${currentLang}/`))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())[0];
+const latestSlug = latestPost?.slug.replace(/^(en|fr)\//, "");
+const latestDate = latestPost
+  ? latestPost.data.date.toLocaleDateString(currentLang === "fr" ? "fr-CA" : "en-US", {
+      month: "long",
+      year: "numeric",
+    })
+  : "";
 
 const github = SOCIALS.find((s) => s.NAME === "github")?.HREF ?? "#";
 const linkedin = SOCIALS.find((s) => s.NAME === "linkedin")?.HREF ?? "#";
@@ -167,15 +181,17 @@ const badgeClass = (style: string) =>
     <section id="writing" class="animate scroll-mt-24">
       <h2 class="font-sans text-3xl font-bold text-stone-900 dark:text-white">{t("writing.heading", currentLang)}</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <a href={`${langPrefix}/blog/killing-my-own-model`} class="md:col-span-2 group rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-7 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors">
-          <span class="font-sans text-xs text-stone-500">{t("writing.goblinKicker", currentLang)}</span>
-          <h3 class="mt-1 font-serif text-2xl text-stone-900 dark:text-white group-hover:text-tangent-700 dark:group-hover:text-tangent-400 transition-colors">{t("writing.goblinTitle", currentLang)}</h3>
-          <p class="mt-2.5 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">{t("writing.goblinDesc", currentLang)}</p>
-          <span class="mt-5 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 group-hover:gap-2.5 transition-all">
-            {t("writing.goblinRead", currentLang)}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
+        {latestPost && (
+          <a href={`${langPrefix}/blog/${latestSlug}`} class="md:col-span-2 group rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-7 hover:border-tangent-400 dark:hover:border-tangent-500 transition-colors">
+            <span class="font-sans text-xs text-stone-500">{latestDate}</span>
+            <h3 class="mt-1 font-serif text-2xl text-stone-900 dark:text-white group-hover:text-tangent-700 dark:group-hover:text-tangent-400 transition-colors">{latestPost.data.title}</h3>
+            <p class="mt-2.5 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">{latestPost.data.description}</p>
+            <span class="mt-5 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-tangent-700 dark:text-tangent-400 group-hover:gap-2.5 transition-all">
+              {t("writing.readPost", currentLang)}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        )}
         <div class="rounded-xl border border-dashed border-stone-300 dark:border-stone-700 p-7 grid place-items-center text-center">
           <p class="font-sans text-sm text-stone-500">{t("writing.more", currentLang)}</p>
         </div>
