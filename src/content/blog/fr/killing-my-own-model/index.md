@@ -3,6 +3,7 @@ title: "Comment j'ai détruit mon propre modèle"
 description: "J'ai construit un prospecteur minier automatique, puis j'ai tenté de le briser avec des retenues strictes dans l'espace et le temps. Il n'a pas survécu, et c'est là tout l'intérêt. Pourquoi les données d'exploration apprennent en douce la mauvaise chose aux modèles."
 date: 2026-06-10
 draft: false
+featured: true
 ---
 
 Dans le milieu de l'édition, "kill your darlings" (tue tes chéris) signifie que raturer le travail t'inspirant le plus de fierté et d'engagement peu être sacrifié pour le bien de l'oeuvre. C'est aussi vrai en science, et dans mon, en science des données. J'ai construit un modèle effectuant ce dont rêve l'industrie minière : lire des données géophysiques et géologiques hétérogènes de sources publiques et pointer précisément où se trouvent probablement les minéraux. Un prospecteur automatique. Les premiers résultats semblaient excellents. Les scores en validation croisée étaient élevés, les cartes s'illuminaient à des endroits sensés, et la version "succès" de ce billet aurait été facile à écrire. "Trop beau pour être vrai", je me suis dit. Alors j'ai passé l'essentiel du projet à essayer de lui donner tort.

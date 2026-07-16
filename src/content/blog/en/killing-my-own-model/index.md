@@ -3,6 +3,7 @@ title: "How I destroyed my own model"
 description: "I built an automatic mineral prospector, then tried to break it with strict space and time holdouts. It didn't survive, and that is the point. A look at why some exploration data quietly teaches models the wrong thing."
 date: 2026-06-10
 draft: false
+featured: true
 ---
 
 In the editing industry, "kill your darlings" means that erasing the work your are the proudest of can be made for the better good. It's also true when it comes to science, and in my case, data science. I built a model to do something the mining industry would love: read geophysical and geological data from heteerogeneous public sources, and pinpoint at where minerals are likely to be. An automatic prospector. And the first results looked excellent. Cross-validated scores were high, the maps lit up in sensible places, and the success-story version of this post would have been easy to write. "Too good to be true", I thought. So I spent most of the project trying to prove it wrong.
