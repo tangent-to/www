@@ -6,7 +6,10 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    draft: z.boolean().optional()
+    draft: z.boolean().optional(),
+    // Pin a post as the homepage feature. If any post sets this, the most
+    // recent featured one wins; otherwise the homepage shows the latest post.
+    featured: z.boolean().optional(),
   }),
 });
 
