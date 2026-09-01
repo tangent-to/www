@@ -14,7 +14,7 @@ tech:
   - Bayesian inference
 ---
 
-The work I'm proudest of. `tangent/` is an open-source suite that makes scientific computing reproducible and install-free: seven JavaScript modules, built end to end and checked against the reference tools in R and Python. It now has its own home.
+The work I'm proudest of. `tangent/` is an open-source suite that makes scientific computing reproducible and install-free: seven JavaScript modules, built end to end and checked against the reference tools in R and Python. It has its own home.
 
 **[suite.tangent.to](https://suite.tangent.to)** — the full suite, docs, and architecture.
 
