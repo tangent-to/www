@@ -14,7 +14,7 @@ tech:
   - Inférence bayésienne
 ---
 
-Le travail dont je suis le plus fier. `tangent/` est une suite libre qui rend le calcul scientifique reproductible et sans installation : sept modules JavaScript, conçus de bout en bout et validés contre les outils de référence de R et Python. Elle a désormais son propre site.
+Le travail dont je suis le plus fier. `tangent/` est une suite libre qui rend le calcul scientifique reproductible et sans installation : sept modules JavaScript, conçus de bout en bout et validés contre les outils de référence de R et Python. Elle a son propre site.
 
 **[suite.tangent.to](https://suite.tangent.to)** — la suite complète, la documentation et l'architecture.
 
