@@ -6,7 +6,7 @@ featured: 4
 draft: false
 demoURL: ""
 repoURL: "https://github.com/essicolo/capyllary"
-image: "/images/projects/capyllary/cover.svg"
+image: "/images/projects/capyllary/slope.png"
 tech:
   - Python
   - marimo
